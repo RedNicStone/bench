@@ -10,6 +10,11 @@ function(bench_add_plight target_name)
     target_link_libraries(${target_name}
         PRIVATE
             nanobench::nanobench
+            doctest
+    )
+    target_compile_definitions(${target_name}
+        PRIVATE
+            DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
     )
 
 endfunction()
